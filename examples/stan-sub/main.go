@@ -91,7 +91,9 @@ func main() {
 	flag.StringVar(&userCreds, "cr", "", "Credentials File")
 	flag.StringVar(&userCreds, "creds", "", "Credentials File")
 
-	log.SetFlags(0)
+	log.SetOutput(os.Stdout)
+	log.Println("Start main of stan sub")
+
 	flag.Usage = usage
 	flag.Parse()
 
